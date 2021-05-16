@@ -55,9 +55,6 @@ function App() {
             "#120E43",
             "#03203C",
           ],
-          enable: true,
-          zoomFactor: 10,
-          enableInteractivity: true,
         }}
         mapsApiKey="AIzaSyCT5TXiTMRVyQ-XW3tsm6N6oC4VTpsPWyo"
         rootProps={{ "data-testid": "1" }}
