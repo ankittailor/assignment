@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 const useSetDataSet = (countryDataSet) => {
-  const [dataSet, setDataSet] = useState([["Region", "Data Usage"]]);
+  const [dataSet, setDataSet] = useState();
   useEffect(() => {
-    countryDataSet.map((country) => {
-      let arr = dataSet;
-      dataSet.push([country.country, country.dataUsage]);
-      return setDataSet(arr);
-    });
-  }, [countryDataSet, dataSet]);
+    let arr = [["Region", "Data Usage"]];
+    countryDataSet.map((country) =>
+      arr.push([country.country, country.dataUsage])
+    );
+    setDataSet(arr);
+  }, [countryDataSet]);
 
   return dataSet;
 };
